@@ -1,9 +1,14 @@
 --- Performs the main loop for DeepStack.
 -- @script deepstack
+--
+--
+
 
 local arguments = require 'Settings.arguments'
 require "ACPC.acpc_game"
 require "Player.continual_resolving"
+
+arguments.acpc_server_port = arg[2]
 
 --1.0 create the ACPC game and connect to the server
 local acpc_game = ACPCGame()
